@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+	.container
+		form(method='post', action='contact/send')
+			h3 Send an Email Now!
+			.row
+				.col.s12.m6.l5
+					.card-panel.white
+						.form-group
+							label Name
+							input.form-control(type='text', name='name', placeholder='Enter your Full Name', required='', aria-required='true')
+						.form-group
+							label Email
+							input.form-control(type='email', name='email', placeholder='Enter your Email', required='', aria-required='true')
+						.form-group
+							label Contact Number
+							input.form-control(type='text', name='cnumber', placeholder='Enter your Contact Number', required='', aria-required='true')
+						.form-group
+							label Message
+							textarea.form-control(type='text', name='message', placeholder='Enter your Message', required='', aria-required='true')
+						br
+						button.btn.waves-effect.waves-light.pink(type='submit')
+							| Submit 

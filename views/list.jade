@@ -1,0 +1,102 @@
+doctype transitional
+//
+  Template Name: PhotoFolio
+  Author: <a href="http://www.os-templates.com/">OS Templates</a>
+  Author URI: http://www.os-templates.com/
+  Licence: Free to use under our free template licence terms
+  Licence URI: http://www.os-templates.com/template-terms
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    title TOP TED TALKS| List of TED Talks
+    meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/stylesheets/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(rel='stylesheet', href='/stylesheets/layout.css', type='text/css')
+  body#top
+    .wrapper.col1
+      #header.clear
+        .fl_left
+          h1
+            img(href='/index', src='/images/logo.png', height='50px', width='180 px', a='')
+            p(style='font-family:arial;') Ideas Worth Spreading
+        .fl_right
+        
+
+    // #######################################################################################################
+    .wrapper.col1
+      #topbar.clear
+        ul#topnav
+          li
+            a(href='/bookslist') Home
+          li
+            a(href='/books') Sell
+          li
+            a(href='/contact') Contact
+          li
+            a(href='/userprofile') User Profile
+          li.last
+            a(href='/auth/logout', style='padding-left:420px') Logout
+    // #######################################################################################################
+    .wrapper.col2
+      #container.clear
+        // #######################################################################################################
+        #content
+          h1 Full Information of the Book
+          #demo
+            h1 Details
+
+              table.highlight.responsive-table
+                thead
+                  tr
+                    th(style = 'width: 30%; font-size:90%')
+                    th(style = 'width: 70%; font-size:90%') 
+                tbody(style = 'font-size: 70%')
+                  tr
+                    td Book Title: 
+                    td #{list.title}
+                  tr
+                    td Author: 
+                    td #{list.author}
+                  tr
+                    td Publication Date: 
+                    td #{list.pub_date}
+                  tr
+                    td Edition: 
+                    td #{list.edition}
+                  tr
+                    td Category: 
+                    td #{list.category}
+                  tr
+                    td Price of the Book: 
+                    td #{list.price}
+                  tr
+                    td Uploader Name: 
+                    td #{list.uploader_name}
+                  tr 
+                    td Contact Number of the Uploader: 
+                    td #{list.contact}
+                  tr
+                    td Email of the Uploader: 
+                    td #{list.email}
+                  tr
+                    td Date Uploaded: 
+                    td #{list.created}
+                  tr
+                    td Date Updated: 
+                    td #{list.updated}
+              br      
+              br
+              center
+                a.btn.waves-effect.waves-light(href='/books/' + list._id + '/edit') Edit
+              br
+              center
+                a.btn.waves-effect.waves-light(href='/books/' + list._id + '/delete') Delete
+            br
+            br
+            #comments
+      // #######################################################################################################
+    // #######################################################################################################
+  Scripts
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='javascripts/materialize.js')
+    script(src='javascripts/init.js')

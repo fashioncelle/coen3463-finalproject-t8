@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    .wrapper.col2
+      #container.clear
+        // #######################################################################################################
+        #content
+          h1 List of Engineering Books
+          br
+          img.imgl(src='./images/l1.jpg', alt='', width='400', height='200')
+          p  TED is a nonpartisan nonprofit devoted to spreading ideas, usually in the form 
+          p of short, powerful talks. TED began in 1984 as a conference where 
+          p Technology, Entertainment and Design converged, and today covers almost 
+          p
+            | all topics  from science to business to global issues  in more than 110 languages.
+          p
+            | Meanwhile, independently run TEDx events help share ideas in communities around the world.
+           section.webdesigntuts-workshop
+            form(action='', method='')
+              input(type='search', placeholder='What TED Talks documentation are you looking for?')
+              button Search
+          #demo
+        
+            h1#totalCount
+            br
+            br
+            h1 TED Talks | Top Lists
+              table.highlight.bordered.responsive-table
+                thead
+                  tr
+                    th(style='width: 45%; font-size:90%') Title
+                    th(style='width: 20%; font-size:90%') Uploader Name
+                    th(style='width: 20%; font-size:90%') Number of Views
+                    th(style='width: 20%; font-size:90%') Date Created
+                    
+                tbody#entry
