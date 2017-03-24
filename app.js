@@ -162,6 +162,8 @@ app.get('/bookslist', function(req, res) {
             uploader_name: req.body.uploader_name,
             contact: req.body.contact,
             email: req.body.email,
+            image: req.body.image,
+            user: req.user.username,
             created: getDate,
             updated: getDate,
         };
@@ -212,6 +214,8 @@ app.get('/bookslist', function(req, res) {
             uploader_name: req.body.uploader_name,
             contact: req.body.contact,
             email: req.body.email,
+            image: req.body.image,
+            user: req.user.username,
             created: getDate,
             updated: getDate,
       };

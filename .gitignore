@@ -1,16 +1,4 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Dependency directory
-node_modules/
-
-# Webstorm files
-.idea/
-
-# Windows thumbnail cache files
-Thumbs.db
-ehthumbs.db
-ehthumbs_vista.db
-
+/node_modules
+    npm-debug.log
+    .DS_Store
+    /*.env
