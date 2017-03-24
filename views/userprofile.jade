@@ -1,33 +1,42 @@
 extends layout
 
 block content
+    head
+      link(rel='stylesheet', href='/stylesheets/userprofile.css', type='text/css')
+      // tabs
+    body
     .wrapper.col2
       #container.clear
         // #######################################################################################################
         #content
-          h1 List of Engineering Books
-            form(action='', method='', onsubmit='getnewSearch()')
-              input#search(type='search', placeholder='What Engineering Book are you looking for?', name='search')
-              button Search
-          #demo
-            
+        .gallery
+           img(src='/images/i.png')
+         .prof
+            h1 Profile Information
+            .header
+              h3 Username:
+                span #{user.username}
+              h3 Email Address:
+                span #{user.email}
             br
+            h2 Engineering Books Uploaded
+              input#user(type='hidden', value='#{user.username}')
+              br
 
-            h1#totalBookcount
-            #allBooks
-            br
-            br
-            h1 Engineering Books Uploaded
-              table.highlight.bordered.responsive-table#result
-                thead
-                  tr
-                    th(style='width: 45%; font-size:90%') Book Title
-                    th(style='width: 20%; font-size:90%') Author
-                    th(style='width: 20%; font-size:90%') Uploader Name
-                    th(style='width: 20%; font-size:90%') Date Uploaded
-                    
-                tbody#newentry
-                                    
+              br
+              .header2
+                h4 
+                  table#table.highlight.bordered.responsive-table
+                    thead
+                      tr
+                        th(style='width: 45%; font-size:90%') Book Title
+                        th(style='width: 25%; font-size:90%') Author
+                        th(style='width: 10%; font-size:90%') Date Posted
+                        th(style='width: 10%; font-size:90%')
+                        th(style='width: 10%; font-size:90%')
+                        
+                    tbody#uentry
+                       
+        // #######################################################################################################
       // #######################################################################################################
-    // #######################################################################################################
 

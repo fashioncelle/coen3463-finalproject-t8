@@ -2,11 +2,13 @@ doctype transitional
 //
 html(xmlns='http://www.w3.org/1999/xhtml')
   head
-    title Engingeering Books Buy and Sell | LOG IN
+    title EB Buy & Sell | LOG IN
     link(rel='stylesheet', href='/stylesheets/login.css', type='text/css')
     // tabs
   body
     .form
+      .gallery
+       img(src='/images/logo3.png')
       ul.tab-group
         li.tab.active
           a(href='#login') Log In
@@ -17,7 +19,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           form(action='/auth/login', method='post')
             if (loginError)
               h6(style='font-size:15px', font-color:'#f44336')= loginError
-            h2 Welcome Back!
+            h2 
               .field-wrap
                 label
                   | Username
@@ -30,7 +32,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                 input(type='password', required='', autocomplete='off', name='password')
               button.button.button-block(type='submit') Log In
         #signup
-          h2 Sign Up for Free
+          h2 
           form(action='/auth/register', method='post', onsubmit='return validation()')
             if (status)
               h6(style='font-size:15px')= status
@@ -39,7 +41,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
               label
                 | First Name
                 span.req *
-              input(type='text', required='', autocomplete='off', name='first_name', id='first_name')
+              input(type='text', required='', autocomplete='off', name='fname', id='fname')
             .field-wrap
               label
                 | Last Name

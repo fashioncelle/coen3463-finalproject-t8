@@ -8,9 +8,10 @@ block content
           h1 List of Engineering Books
             br
             br
-            form(action='', method='', onsubmit='getSearch()')
-              input#search(type='search', placeholder='What Engineering Book are you looking for?' name='search')
-              button Search
+            section.webdesigntuts-workshop
+              form(action='', method='', onsubmit='getSearch()')
+                input#search(type='search', placeholder='search book..' name='search')
+                button Search
           #demo
             
               br
@@ -23,8 +24,8 @@ block content
                   tr
                     th(style='width: 45%; font-size:90%') Book Title
                     th(style='width: 20%; font-size:90%') Author
-                    th(style='width: 20%; font-size:90%') Uploader Name
-                    th(style='width: 20%; font-size:90%') Date Uploaded
+                    th(style='width: 25%; font-size:90%') Uploader Name
+                    th(style='width: 25%; font-size:90%') Date Posted
                     
                 tbody#entry
             

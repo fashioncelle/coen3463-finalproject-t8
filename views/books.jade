@@ -1,97 +1,65 @@
-doctype transitional
-//
-  Template Name: PhotoFolio
-  Author: <a href="http://www.os-templates.com/">OS Templates</a>
-  Author URI: http://www.os-templates.com/
-  Licence: Free to use under our free template licence terms
-  Licence URI: http://www.os-templates.com/template-terms
-html(xmlns='http://www.w3.org/1999/xhtml')
-  head
-    title SELL BOOK/S
-    meta(http-equiv='Content-Type', content='text/html; charset=iso-8859-1')
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='/stylesheets/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
-    link(rel='stylesheet', href='/stylesheets/layout.css', type='text/css')
-  body#top
-    .wrapper.col1
-      #header.clear
-        .fl_left
-          h1
-            img(href='/index', src='/images/logo.png', height='50px', width='180 px', a='')
-            p(style='font-family:arial;') Ideas Worth Spreading
+extends layout
 
-    // #######################################################################################################
-    .wrapper.col1
-      #topbar.clear
-        ul#topnav
-          li
-            a(href='/bookslist') Home
-          li
-            a(href='/books') Sell
-          li
-            a(href='/contact') Contact
-          li
-            a(href='/userprofile') User Profile
-          li.last
-            a(href='/auth/logout', style='padding-left:420px') Logout
-    // #######################################################################################################
-    .wrapper.col2
-      #container.clear
-
-    //PAG ADD OR SELL NG BOOKS
-        // #######################################################################################################
-  
-    // #######################################################################################################
+block content
+   head
+      link(rel='stylesheet', href='/stylesheets/contact.css', type='text/css')
+      // tabs
+    body
     .wrapper.col2
       #container.clear
         // #######################################################################################################
-      center  
-        h5 Sell an Engineering Book Now!
-        br
-        br
-        .container
-          .row
-            form.col.s12(method='POST', action='/books')
+        #content 
+          h1 Sell an Engineering Book Now!
+          .row.header
+            .container
               .row
-                .form-group.col.s12.m12.l6
-                  label Book Title
-                  input.form-control(type='text', name='title', placeholder='Engineering Mechanics', required='', aria-required='true')
-                  br
-                .form-group.col.s12.m12.l6
-                  label Author
-                  input.form-control(type='text', name='author', placeholder='Venancio Besavilla', required='', aria-required='true')
-                  br
-                .form-group.col.s12.m12.l6
-                  label Publication Date
-                  input.form-control(type='text', name='pub_date', placeholder='2009', required='', aria-required='true')
-                  br
-                .form-group.col.s12.m12.l6
-                  label Edition
-                  input.form-control(type='text', name='edition', placeholder='Second Edition', required='', aria-required='true')
-                  br
-                .form-group.col.s12.m12.l6
-                  label Category
-                  input.form-control(type='text', name='category', placeholder='Civil,CPE')
-                  br
-                .form-group.col.s12.m12.l6
-                  label Price
-                  input.form-control(type='text', name='price', placeholder='P200')
-                  br
-                .form-group.col.s12.m12.l6
-                  label Uploader Name
-                  input.form-control(type='text', name='uploader_name', placeholder='Juan Dela Cruz')
-                  br
-                .form-group.col.s12.m12.l6
-                  label Contact Number of the Uploader
-                  input.form-control(type='text', name='contact', placeholder='123456789')
-                  br
-                .form-group.col.s12.m12.l6
-                  label Email Address of the Uploader
-                  input.form-control(type='email', name='email', placeholder='your@email.com')
-                br
-                button.btn.waves-effect.waves-light.red(type='submit')
-                  | Submit 
-                  i.material-icons.right
+                form.col.s12(method='POST', action='/books')
+                  .row
+                    .form-group.col.s12.m12.l6
+                      label
+                      a(href='http://postimage.io/', target='_blank') CLICK HERE TO UPLOAD IMAGE
+                      input.form-control(type='text', name='image', placeholder='NOTE* Copy the DIRECT LINK here', required='', aria-required='true')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Book Title
+                      input.form-control(type='text', name='title', placeholder='Engineering Mechanics', required='', aria-required='true')
+                      input.form-control(type='hidden', placeholder='Username', value='#{user.username}' name='username')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Author
+                      input.form-control(type='text', name='author', placeholder='Venancio Besavilla', required='', aria-required='true')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Publication Date
+                      input.form-control(type='text', name='pub_date', placeholder='2009', required='', aria-required='true')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Edition
+                      input.form-control(type='text', name='edition', placeholder='Second Edition', required='', aria-required='true')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Category
+                      input.form-control(type='text', name='category', placeholder='Civil,CPE')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Price
+                      input.form-control(type='text', name='price', placeholder='P200')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Uploader Name
+                      input.form-control(type='text', name='uploader_name', placeholder='Juan Dela Cruz')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Contact Number of the Uploader
+                      input.form-control(type='text', name='contact', placeholder='123456789')
+                      br
+                    .form-group.col.s12.m12.l6
+                      label Email Address of the Uploader
+                      input.form-control(type='email', name='email', placeholder='your@email.com')
+                    br
+                    button.btn(type='submit')
+                      | Submit 
+                      i.material-icons.right
   Scripts
     script(src='https://code.jquery.com/jquery-2.1.1.min.js')
     script(src='javascripts/materialize.js')
