@@ -21,7 +21,7 @@ if (window.location.pathname === '/bookslist') {
 				res.json().then(function(count){
 					console.log('count', count)
 					var list = document.getElementById('totalCount');
-					list.innerHTML = 'There are ' + count.count + ' Engineering Book/s';
+					list.innerHTML = 'There are ' + count.count + ' Engineering Book/s Available';
 				});
 			});
 	}
@@ -36,7 +36,7 @@ if (window.location.pathname === '/bookslist') {
 
 					document.getElementById('result').style.display = "none";
 
-					document.getElementById('allBooks').insertAdjacentHTML('beforeend', '<a href="/tedtalkslist"' +
+					document.getElementById('allBooks').insertAdjacentHTML('beforeend', '<a href="/bookslist"' +
 					'>Back to the List of Engineering Books</a>')
 
 				}
@@ -44,14 +44,14 @@ if (window.location.pathname === '/bookslist') {
 					document.getElementById('totalCount').innerHTML = "Found " + result.length +
 					" book/s related to " + localStorage.getItem("search");
 
-					document.getElementById('allBooks').insertAdjacentHTML('beforeend', '<a href="/tedtalkslist"' +
+					document.getElementById('allBooks').insertAdjacentHTML('beforeend', '<a href="/bookslist"' +
 					'>Back to the List of Engineering Books</a>')
 				}
 				else {
 					document.getElementById('totalCount').innerHTML = "Found " + result.length +
 					" book/s related to " + localStorage.getItem("search");
 
-					document.getElementById('allBooks').insertAdjacentHTML('beforeend', '<a href="/tedtalkslist"' +
+					document.getElementById('allBooks').insertAdjacentHTML('beforeend', '<a href="/bookslist"' +
 					'>Back to the List of Engineering Books</a>')
 				}
 				
@@ -68,4 +68,19 @@ if (window.location.pathname === '/bookslist') {
 	}
 }
 
-
+if (window.location.pathname === '/userprofile') {
+			var user = document.getElementById("user").value;
+			  fetch('/api/v1/books?query={"user":"~('+ user +')"}').then(function(res) {
+			    res.json().then(function(books) {	
+			    	console.log('books', books);
+			     	books.forEach(function(books) {
+			    	var tbody = document.getElementById('uentry');
+			    		tbody.insertAdjacentHTML('beforeend', '<tr><td>' + '<a href="/list/' + books._id + '", class="red-text", style="font-size: 15px">' + books.title + '</td><td>' 
+						+ '<a class="grey-text", style="font-size: 15px">' + books.author + '</td><td>'  
+						+ '<a class="grey-text", style="font-size: 15px">' + books.created + '<td><td><a href="/books/' 
+			         	+ books._id + '/edit">' + 'Edit' + '</td><td><a href="/books/' 
+			         	+ books._id + '/delete">' + 'Delete' + '</td></tr>');
+			      });
+			    })
+			  });
+};
