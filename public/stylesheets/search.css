@@ -17,21 +17,21 @@
 }
 
 .webdesigntuts-workshop:before {
-  background: #444;
+  background: #ffffff;
   background: -webkit-linear-gradient(left, #151515, #444, #151515);
   background: linear-gradient(left, #151515, #444, #151515);
   top: 192px;
 }
 
 .webdesigntuts-workshop:after {
-  background: #000;
+  background: #ffffff;
   background: -webkit-linear-gradient(left, #151515, #000, #151515);
   background: linear-gradient(left, #151515, #000, #151515);  
   top: 191px;
 }
 
 .webdesigntuts-workshop form {
-  background: #111;
+  background: #ffffff;
   background: -webkit-linear-gradient(#1b1b1b, #111);
   background: linear-gradient(#1b1b1b, #111);
   border: 1px solid #000;
@@ -46,7 +46,7 @@
 }
 
 .webdesigntuts-workshop input {
-  background: #222; 
+  background: #ffffff; 
   background: -webkit-linear-gradient(#333, #222);  
   background: linear-gradient(#333, #222);  
   border: 1px solid #444;
@@ -62,7 +62,7 @@
   margin: 0;
   padding: 0 10px;
   text-shadow: 0 -1px 0 #000;
-  width: 850px;
+  width: 750px;
 }
 
 .ie .webdesigntuts-workshop input {
@@ -70,11 +70,11 @@
 }
 
 .webdesigntuts-workshop input::-webkit-input-placeholder {
-   color: #888;
+   color: #ffffff;
 }
 
 .webdesigntuts-workshop input:-moz-placeholder {
-   color: #888;
+   color: #ffffff;
 }
 
 .webdesigntuts-workshop input:focus {
@@ -90,11 +90,11 @@
 }
 
 .webdesigntuts-workshop input:focus::-webkit-input-placeholder { 
-  color: #efe;
+  color: #ffffff;
 }
 
 .webdesigntuts-workshop input:focus:-moz-placeholder {
-  color: #efe;
+  color: #ffffff;
 }
 
 .webdesigntuts-workshop button {
@@ -151,11 +151,11 @@
 
 @keyframes glow {
     0% {
-    border-color: #393;
+    border-color: #ffff00;
     box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
     } 
     100% {
-    border-color: #6f6;
+    border-color: #ffff00;
     box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 2px 0 #000;
     }
 }

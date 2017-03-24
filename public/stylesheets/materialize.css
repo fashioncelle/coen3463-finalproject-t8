@@ -2383,6 +2383,7 @@ textarea {
  */
 button {
   overflow: visible;
+  background-color: #ffffff;
 }
 
 /**
@@ -2554,7 +2555,7 @@ ul:not(.browser-default) li {
 a {
   color: #039be5;
   text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: black;
 }
 
 .valign-wrapper {
@@ -3495,6 +3496,7 @@ input[type=range] + .thumb {
   margin-left: auto;
   left: auto;
   right: auto;
+  background-color: #000000;
 }
 
 .row .col.offset-s1 {
@@ -4662,6 +4664,7 @@ small {
   display: block;
   position: fixed;
   z-index: 10000;
+  background-color: #000000;
 }
 
 @media only screen and (max-width: 600px) {
@@ -6000,7 +6003,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field label {
-  color: #9e9e9e;
+  color: #000000;
   position: absolute;
   top: 0.8rem;
   left: 0;
@@ -6094,7 +6097,7 @@ textarea.materialize-textarea + label:after {
 textarea {
   width: 100%;
   height: 3rem;
-  background-color: transparent;
+  background-color: white;
 }
 
 textarea.materialize-textarea {

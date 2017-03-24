@@ -173,3 +173,11 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
    	height: 90px;
    }
 
+  .conatiner {
+    width: 100%;
+    margin: 0 0 1em 0;
+    padding: 0 6em;
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }

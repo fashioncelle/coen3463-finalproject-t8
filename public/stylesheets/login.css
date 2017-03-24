@@ -5,7 +5,7 @@
 html {
 
   overflow-y: scroll;
-  background: url(../images/bg.jpg) no-repeat center center fixed; 
+  background: url(../images/bg2.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,7 +28,7 @@ a:hover {
 }
 
 .form {
-  background: rgba(19, 35, 47, 0.9);
+  background: rgba(255, 255, 255, 1);
   padding: 30px;
   max-width: 400px;
   margin: 20px auto;
@@ -36,7 +36,10 @@ a:hover {
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   width: 100% !important;
 }
-
+.form .gallery img {
+    display: block;
+    padding-left: 80px;
+}
 .tab-group {
   list-style: none;
   padding: 0;
@@ -62,12 +65,12 @@ a:hover {
   transition: .5s ease;
 }
 .tab-group li a:hover {
-  background: #fc8a96;
-  color: #ffffff;
+  background: #f2f060;
+  color: #000000;
 }
 .tab-group .active a {
-  background: #ed1026;
-  color: #ffffff;
+  background: #efec28;
+  color: #000000;
 }
 
 .tab-content > div:last-child {
@@ -76,17 +79,17 @@ a:hover {
 
 h2 {
   text-align: center;
-  color: #ffffff;
+  color: #000000;
   font-weight: 300;
   margin: 0 0 30px;
 }
 
 label {
-  position: absolute;
+  position: top-left;
   -webkit-transform: translateY(6px);
           transform: translateY(6px);
   left: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0);
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
@@ -96,7 +99,7 @@ label {
 }
 label .req {
   margin: 2px;
-  color: #ed1026;
+  color: #110f10;
 }
 
 label.active {
@@ -111,7 +114,7 @@ label.active .req {
 }
 
 label.highlight {
-  color: #ffffff;
+  color: #000000;
 }
 
 input, textarea {
@@ -123,7 +126,7 @@ input, textarea {
   background: none;
   background-image: none;
   border: 1px solid #a0b3b0;
-  color: #ffffff;
+  color: #000000;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
@@ -166,14 +169,14 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #ed1026;
-  color: #ffffff;
+  background: #efec28;
+  color: #000000
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
 .button:hover, .button:focus {
-  background: #ed1026;
+  background: #bfbea0;
 }
 
 .button-block {
