@@ -24,8 +24,8 @@ router.post('/send', function(req, res, next){
         from: 'Team Engineering Books Buy and Sell <enineeringbooksbuyandsell@outlook.com>',
         to: 'engineeringbooksbuyandsell@gmail.com',
         subject: 'Website Message Submission',
-        text: 'You have a new submission with the following details...Name: '+req.body.name+ ' Email: '+req.body.email+ ' Type of Event: '+req.body.book+ ' Message: '+req.body.message, 
-        html: '<p> You got a new submission with the following details..</p><ul><li>Name: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>Type of Event: '+req.body.book+'</li><li>Message: '+req.body.message+'</li></ul>'
+        text: 'You have a new submission with the following details...Name: '+req.body.name+ ' Email: '+req.body.email+ ' Message: '+req.body.message, 
+        html: '<p> You got a new submission with the following details..</p><ul><li>Name: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>Message: '+req.body.message+'</li></ul>'
     };
 
     transporter.sendMail(mailOptions, function(error, info){
