@@ -12,7 +12,7 @@ if (window.location.pathname === '/bookslist') {
 						tbody.insertAdjacentHTML('beforeend', '<tr><td>' + '<a href="/list/' + books._id + '", class="red-text", style="font-size: 15px">' + books.title + '</td><td>' 
 						+ '<a class="grey-text", style="font-size: 15px">' + books.author + '</td><td>' 
 						+ '<a class="grey-text", style="font-size: 15px">' + books.uploader_name + '</td><td>' 
-						+ '<a class="grey-text", style="font-size: 15px">' + books.created + '</td></tr>');
+						+ '<a class="grey-text", style="font-size: 15px">' + books.price + '</td></tr>');
 					});
 		      		});
 		    	});
@@ -60,7 +60,7 @@ if (window.location.pathname === '/bookslist') {
 						tbody.insertAdjacentHTML('beforeend', '<tr><td>' + '<a href="/list/' + result._id + '", class="red-text", style="font-size: 15px">' + result.title + '</td><td>' 
 						+ '<a class="grey-text", style="font-size: 15px">' + result.author + '</td><td>' 
 						+ '<a class="grey-text", style="font-size: 15px">' + result.uploader_name + '</td><td>' 
-						+ '<a class="grey-text", style="font-size: 15px">' + result.created + '</td></tr>');
+						+ '<a class="grey-text", style="font-size: 15px">' + result.price + '</td></tr>');
 				});
 				localStorage.setItem("search", null);
 			});
