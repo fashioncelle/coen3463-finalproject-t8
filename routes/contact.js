@@ -20,7 +20,7 @@ router.get('/', function(req, res, next){
     res.render('contact', {title: 'Contact'});  
 });
 
-router.post('/send-email', function(req, res, next){
+router.post('/send', function(req, res, next){
     var inquiry = {
         from: 'engineeringbooksbuyandsell@gmail.com',
         to: 'engineeringbooksbuyandsell@gmail.com',
