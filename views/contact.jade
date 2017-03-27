@@ -10,12 +10,14 @@ block content
 					label Name
 					input#name.form-control(type='text', name='name', placeholder='Enter your Full Name', required='', aria-required='true', value= nameValue)
 				div
+					label Contact Number
+					input#name.form-control(type='text', name='number', placeholder='Enter your Contact Number', required='', aria-required='true', value= numberValue)
+				div
 					label Email
-					input#email.form-control(type='email', name='email', placeholder='engineeringbooksbuyandsell@gmail.com', required='', aria-required='true', value= emailValue)
+					input#email.form-control(type='email', name='email', placeholder='Enter the Email address of the Seller', required='', aria-required='true', value= emailValue)
 				div
 					label Message
-					textarea#message.form-control(type='text', name='message', placeholder='Enter your Message', required='', aria-required='true')
-						|#{messageValue}
+					textarea#message.form-control(type='text', name='message', placeholder='Enter your Message to the Seller', required='', aria-required='true')
 				br
 				button.btn.waves-effect.waves-light.pink(type='submit')
 					| Submit 
