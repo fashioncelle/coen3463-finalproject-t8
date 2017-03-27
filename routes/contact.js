@@ -1,32 +1,43 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var books = require('../models/books');
 
-router.get('/', function(req, res, next){
-    res.render('contact', {title: 'Contact'});  
+var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'engineeringbooksbuyandsell@gmail.com',
+        pass: 'Engineeringbooks'
+    }
 });
 
 
-router.post('/send', function(req, res, next){
-    console.log(req.body);
-    var dataToSave = {
-        email: req.body.email
-    }
-    var transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: 'engineeringbooksbuyandsell@gmail.com',
-            pass: 'Engineeringbooks'
+router.get('/', function(req, res, next){
+        var data = {
+            title: "Engineering Books Buy & Sell",
+            user: req.user
         }
-    });
+    res.render('contact', {title: 'Contact'});  
+});
 
-    var mailOptions = {
-        from: 'Team Engineering Books Buy and Sell <enineeringbooksbuyandsell@outlook.com>',
+router.post('/send-email', function(req, res, next){
+    var inquiry = {
+        from: 'engineeringbooksbuyandsell@gmail.com',
         to: 'engineeringbooksbuyandsell@gmail.com',
-        subject: 'Website Message Submission',
-        text: 'You have a new submission with the following details...Name: '+req.body.name+ ' Email: '+req.body.email+ ' Message: '+req.body.message, 
-        html: '<p> You got a new submission with the following details..</p><ul><li>Name: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>Message: '+req.body.message+'</li></ul>'
-    };
+        subject: 'Buy and Sell Engineering Books',
+        text: "Name: " + req.body.name + '\n' +
+        "Email: " + req.body.email + '\n' +
+        "Message: " + req.body.message
+    }
+    
+    var mailOptions = {
+        from: 'Team Engineering Books Buy and Sell <engineeringbooksbuyandsell@gmail.com>',
+        to: req.body.email,
+        subject: 'You got a Buyer!',
+        text: "Name of the Buyer: " + req.body.name + '\n' +
+        "Contact Number of the Buyer: " + req.body.number + '\n' +
+        "Message of the Buyer: " + req.body.message
+    }
 
     transporter.sendMail(mailOptions, function(error, info){
         if(error){
