@@ -143,3 +143,7 @@ td.text-center {
 td.text-right {
   text-align: right;
 }
+
+.img {
+  padding-left: 90px
+}
