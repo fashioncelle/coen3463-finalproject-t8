@@ -3,18 +3,18 @@ extends layout
 block content
 
 	.contact
-		form#contactForm(method='post', action='contact/send-email', name= 'contactForm')
+		form#contactForm(method='post', action='contact/send', name= 'contactForm')
 			h3 Send an Email Now!
 			.col-md-6.contact-grid
 				div
 					label Name
-					input#name.form-control(type='text', name='name', placeholder='Enter your Full Name', required='', aria-required='true', value= nameValue)
+					input#name.form-control(type='text', name='name', placeholder='Enter your Full Name', required='', aria-required='true')
 				div
 					label Contact Number
-					input#name.form-control(type='text', name='number', placeholder='Enter your Contact Number', required='', aria-required='true', value= numberValue)
+					input#name.form-control(type='text', name='number', placeholder='Enter your Contact Number', required='', aria-required='true')
 				div
 					label Email
-					input#email.form-control(type='email', name='email', placeholder='Enter the Email address of the Seller', required='', aria-required='true', value= emailValue)
+					input#email.form-control(type='email', name='email', placeholder='Enter the Email address of the Seller', required='', aria-required='true')
 				div
 					label Message
 					textarea#message.form-control(type='text', name='message', placeholder='Enter your Message to the Seller', required='', aria-required='true')
