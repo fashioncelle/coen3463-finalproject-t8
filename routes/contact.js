@@ -25,9 +25,9 @@ router.post('/send', function(req, res, next){
         from: 'engineeringbooksbuyandsell@gmail.com',
         to: 'engineeringbooksbuyandsell@gmail.com',
         subject: 'Buy and Sell Engineering Books',
-        text: "Name: " + req.body.name + '\n' +
-        "Email: " + req.body.email + '\n' +
-        "Message: " + req.body.message
+        text: "Name of the buyer: " + req.body.name + '\n' +
+        "Email of the Seller: " + req.body.email + '\n' +
+        "Message of the Buyer: " + req.body.message
     }
     
     var mailOptions = {
