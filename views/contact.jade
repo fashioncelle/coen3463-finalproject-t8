@@ -2,25 +2,28 @@ extends layout
 
 block content
 
-	.container
-		form#contactForm(method='post', action='contact/send', name= 'contactForm')
+	.contact
+		form#contactForm(method='post', action='contact/send-email', name= 'contactForm')
 			h3 Send an Email Now!
-			.row
-				.col.s12.m6.l5
-					.card-panel.white
-						.form-group
-							label Name
-							input#name.form-control(type='text', name='name', placeholder='Enter your Full Name', required='', aria-required='true', value= nameValue)
-						.form-group
-							label Email
-							input#email.form-control(type='email', name='email', placeholder='Enter your Email', required='', aria-required='true', value= emailValue)
-						.form-group
-							label Message
-							textarea#message.form-control(type='text', name='message', placeholder='Enter your Message', required='', aria-required='true')
-								|#{messageValue}
-						br
-						button.btn.waves-effect.waves-light.pink(type='submit')
-							| Submit 
-						br
-						br
-						| #{statusValue}
+			.col-md-6.contact-grid
+				div
+					label Name
+					input#name.form-control(type='text', name='name', placeholder='Enter your Full Name', required='', aria-required='true', value= nameValue)
+				div
+					label Email
+					input#email.form-control(type='email', name='email', placeholder='engineeringbooksbuyandsell@gmail.com', required='', aria-required='true', value= emailValue)
+				div
+					label Message
+					textarea#message.form-control(type='text', name='message', placeholder='Enter your Message', required='', aria-required='true')
+						|#{messageValue}
+				br
+				button.btn.waves-effect.waves-light.pink(type='submit')
+					| Submit 
+				br
+				br
+				| #{statusValue}
+	.clearfix 
+	//
+
+
+	
