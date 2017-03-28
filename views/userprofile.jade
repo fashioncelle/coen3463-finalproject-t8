@@ -9,34 +9,35 @@ block content
       #container.clear
         // #######################################################################################################
         #content
-        .gallery
-           img(src='/images/i.png')
-         .prof
-            h1 Profile Information
-            .headerdaw
-              h3 Username:
-                span #{user.username}
-              h3 Email Address:
-                span #{user.email}
-            br
-            h2 Engineering Books Uploaded
-              input#user(type='hidden', value='#{user.username}')
+        center
+          .gallery
+             img(src='/images/i.png')
+           .prof
+              h1 Profile Information
+              .headerdaw
+                h3 Username:
+                  span #{user.username}
+                h3 Email Address:
+                  span #{user.email}
               br
+              h2 Engineering Books Uploaded
+                input#user(type='hidden', value='#{user.username}')
+                br
 
-              br
-              .header2
-                h4 
-                  table#table.highlight.bordered.responsive-table
-                    thead
-                      tr
-                        th(style='width: 45%; font-size:90%') Book Title
-                        th(style='width: 25%; font-size:90%') Author
-                        th(style='width: 10%; font-size:90%') Date Updated
-                        th(style='width: 10%; font-size:90%')
-                        th(style='width: 10%; font-size:90%')
-                        
-                    tbody#uentry
-                       
+                br
+                .header2
+                  h4 
+                    table.container
+                      thead
+                        tr
+                          th(style='width: 45%; font-size:90%') Book Title
+                          th(style='width: 25%; font-size:90%') Author
+                          th(style='width: 10%; font-size:90%') Date Updated
+                          th(style='width: 10%; font-size:90%')
+                          th(style='width: 10%; font-size:90%')
+                          
+                      tbody#uentry
+
         // #######################################################################################################
       // #######################################################################################################
 
