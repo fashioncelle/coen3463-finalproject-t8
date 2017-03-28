@@ -10,9 +10,9 @@ if (window.location.pathname === '/bookslist') {
 					books.forEach(function(books){
 					var tbody = document.getElementById('entry');
 						tbody.insertAdjacentHTML('beforeend', '<tr><td>' + '<a href="/list/' + books._id + '", class="red-text", style="font-size: 15px">' + books.title + '</td><td>' 
-						+ '<a class="grey-text", style="font-size: 15px">' + books.author + '</td><td>' 
-						+ '<a class="grey-text", style="font-size: 15px">' + books.uploader_name + '</td><td>' 
-						+ '<a class="grey-text", style="font-size: 15px">' + books.price + '</td></tr>');
+						+ '<a class="white-text", style="font-size: 15px">' + books.author + '</td><td>' 
+						+ '<a class="white-text", style="font-size: 15px">' + books.uploader_name + '</td><td>' 
+						+ '<a class="white-text", style="font-size: 15px">' + books.price + '</td></tr>');
 					});
 		      		});
 		    	});
@@ -33,8 +33,6 @@ if (window.location.pathname === '/bookslist') {
 				if (result.length === 0) {
 					document.getElementById('totalCount').innerHTML = "No book/s found related to " + 
 					localStorage.getItem("search");
-
-					document.getElementById('result').style.display = "none";
 
 					document.getElementById('allBooks').insertAdjacentHTML('beforeend', '<a href="/bookslist"' +
 					'>Back to the List of Engineering Books</a>')
@@ -58,9 +56,9 @@ if (window.location.pathname === '/bookslist') {
 				var tbody = document.getElementById('entry');
 				result.forEach(function(result) {
 						tbody.insertAdjacentHTML('beforeend', '<tr><td>' + '<a href="/list/' + result._id + '", class="red-text", style="font-size: 15px">' + result.title + '</td><td>' 
-						+ '<a class="grey-text", style="font-size: 15px">' + result.author + '</td><td>' 
-						+ '<a class="grey-text", style="font-size: 15px">' + result.uploader_name + '</td><td>' 
-						+ '<a class="grey-text", style="font-size: 15px">' + result.price + '</td></tr>');
+						+ '<a class="white-text", style="font-size: 15px">' + result.author + '</td><td>' 
+						+ '<a class="white-text", style="font-size: 15px">' + result.uploader_name + '</td><td>' 
+						+ '<a class="white-text", style="font-size: 15px">' + result.price + '</td></tr>');
 				});
 				localStorage.setItem("search", null);
 			});
