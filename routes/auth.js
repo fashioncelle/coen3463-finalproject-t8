@@ -35,7 +35,7 @@ router.get('/register', function(req, res) {
     password = "";
   }
   else {
-    res.redirect('/');
+    res.redirect('/bookslist');
   }
 });
 
@@ -136,7 +136,7 @@ router.post('/login',
 router.get('/logout', function(req, res){
   req.logout();
 
-  res.redirect('/')
+  res.redirect('/bookslist')
 })
 
 module.exports = router;
